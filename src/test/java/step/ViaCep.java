@@ -11,12 +11,6 @@ import resources.Requests;
 
 public class ViaCep extends StepValidationUtils {
 
-    public static Response response;
-    public static ValidatableResponse validatableResponse;
-    public static String placeID;
-    public Requests requests;
-    private String api;
-
     public ViaCep(Requests requests) {
         this.requests = requests;
     }
@@ -25,7 +19,6 @@ public class ViaCep extends StepValidationUtils {
     public void user_calls_request_with_http_request(final String apiName, final String requestType) {
 
         response = requests.getRequest(apiName, Method.valueOf(requestType));
-        this.api = apiName;
         validatableResponse = response.then();
         js = getJson(validatableResponse);
     }
@@ -41,24 +34,24 @@ public class ViaCep extends StepValidationUtils {
     public void in_response_body_is(final String value1, final String value2) {
         verifyResponseKeyValues(value1, value2, validatableResponse);
     }
-
-    @Then("I retrieve the Place ID")
-    public void i_retrieve_the_place_id() {
-        placeID = js.get("place_id");
-
-        verifyEmpty(placeID);
-        System.out.println("Place ID: " + placeID);
-    }
-
-    @Then("Validate the schema")
-    public void i_validate_the_schema() {
-        // Write code here that turns the phrase above into concrete actions
-
-        validationSchema(validatableResponse, this.api);
-    }
+//Comentando para poder verificar a utilização depois
+//Then("I retrieve the Place ID")
+//    public void i_retrieve_the_place_id() {
+//        placeID = js.get("place_id");
+//
+//        verifyEmpty(placeID);
+//        System.out.println("Place ID: " + placeID);
+//    }
 
     @And("Validate the schema {string}")
     public void validateTheSchema(String schemaName) {
         validationSchema(validatableResponse, schemaName);
+    }
+
+    @Given("User calls {string} with GET http request")
+    public void userCallsWithGETHttpRequest(String apiName) {
+        response = requests.getRequestGivenApiName(apiName);
+        validatableResponse = response.then();
+        js = getJson(validatableResponse);
     }
 }

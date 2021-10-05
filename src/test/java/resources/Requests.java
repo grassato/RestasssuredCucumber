@@ -29,6 +29,24 @@ public class Requests {
 
         return response;
     }
+
+    public Response getRequestGivenApiName(final String apiName) {
+
+        APIResources resourceAPI = APIResources.valueOf(apiName);
+        reqspec = new BaseBuilder().placeSpecBuilder();
+
+        System.out.println("Sending GET request to: " + resourceAPI.getResource() + " service");
+
+        response = given()
+                .spec(reqspec)
+                .get(resourceAPI.getResource())
+                .then()
+                //.log().all()
+                .extract()
+                .response();
+
+        return response;
+    }
 }
 
 

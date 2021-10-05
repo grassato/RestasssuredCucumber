@@ -3,6 +3,7 @@ package step;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
+import resources.Requests;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.CoreMatchers.is;
@@ -17,6 +18,10 @@ import static org.junit.Assert.*;
  * @since 2021/09/28
  */
 abstract class StepValidationUtils {
+
+    public static Response response;
+    public static ValidatableResponse validatableResponse;
+    public Requests requests;
 
     public static JsonPath js;
 
