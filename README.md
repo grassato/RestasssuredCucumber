@@ -13,6 +13,7 @@ API Automation Test is RestAssured based Cucumber framework to perform API testi
 - To pass environment variable from command line `mvn clean test verify`
 
 `mvn clean test verify -DargLine=-DENVIRONMENT=dev`
+- To run tests per tag, `mvn clean test verify -Dcucumber.filter.tags="@project01"`
 
 ### Reports used
 - `Spark HTML Report`
