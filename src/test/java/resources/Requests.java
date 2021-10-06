@@ -12,7 +12,8 @@ public class Requests {
     static Response response;
     RequestSpecification reqspec;
 
-    public Response getRequest(final String apiName, final Method requestType) {
+    //This method receives a param value and uses it to call the API in request()
+    public Response getRequest(final String apiName, final Method requestType, String paramValue) {
 
         APIResources resourceAPI = APIResources.valueOf(apiName);
         reqspec = new BaseBuilder().placeSpecBuilder();
@@ -21,9 +22,9 @@ public class Requests {
 
         response = given()
                 .spec(reqspec)
-                .request(requestType.toString(), resourceAPI.getResource())
+                .request(requestType.toString(), resourceAPI.getResource(), paramValue)
                 .then()
-                //.log().all()
+//                .log().all()
                 .extract()
                 .response();
 

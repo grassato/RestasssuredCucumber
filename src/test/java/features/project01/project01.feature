@@ -9,7 +9,7 @@ Feature: Test consult the via CEP API - project01
 
   @viaCep
   Scenario: Test Get viaCEP 1
-    Given User calls "viaCEP1" with GET http request
+    Given User calls "viaCEP2" with GET http request
     Then Status code is 200
     And Validate the schema "viaCEP"
 

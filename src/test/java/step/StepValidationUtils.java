@@ -14,29 +14,28 @@ import static org.junit.Assert.*;
  * Classe base resposável por reunir utilitários para serem utlizado na validação das asserções
  *
  * @author dgrassato
- * @lastUpdate 2021/09/28
+ * @lastUpdate 2021/10/06, juandepaiva
  * @since 2021/09/28
  */
 abstract class StepValidationUtils {
 
     public static Response response;
     public static ValidatableResponse validatableResponse;
-    public Requests requests;
-
     public static JsonPath js;
+    public Requests requests;
 
     public static JsonPath rawToJson(final Response response) {
         js = new JsonPath(response.body().asString());
         return js;
     }
 
-    public static JsonPath getJson(final ValidatableResponse validatableResponse) {
+    public static JsonPath getJson() {
         js = validatableResponse.extract().jsonPath();
         return js;
     }
 
-    public void verifyResponseKeyValues(final String key, final String val, final ValidatableResponse validatableResponse) {
-        js = getJson(validatableResponse);
+    public void verifyResponseKeyValues(final String key, final String val) {
+        js = getJson();
 
         String keyValue = js.getString(key);
         assertThat(keyValue, is(val));
@@ -54,11 +53,11 @@ abstract class StepValidationUtils {
         assertNotNull(val);
     }
 
-    public void verifyResponseStatusValue(final ValidatableResponse validatableResponse, int expectedCode) {
+    public void verifyResponseStatusValue(int expectedCode) {
         validatableResponse.statusCode(is(expectedCode));
     }
 
-    public void validationSchema(final ValidatableResponse validatableResponse, String schemaName) {
+    public void validationSchema(String schemaName) {
 
         final String schemaPath = "contracts/".concat(schemaName).concat(".json");
         validatableResponse.body(matchesJsonSchemaInClasspath(schemaPath)).assertThat();
