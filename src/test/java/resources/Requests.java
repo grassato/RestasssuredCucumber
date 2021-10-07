@@ -12,7 +12,8 @@ public class Requests {
     static Response response;
     RequestSpecification reqspec;
 
-    //This method receives a param value and uses it to call the API in request()
+    //This method receives a param value and uses it to call the API in request().
+    //request() accepts GET, PUT, POST, DELETE and so on as a parameter
     public Response getRequest(final String apiName, final Method requestType, String paramValue) {
 
         APIResources resourceAPI = APIResources.valueOf(apiName);
@@ -31,6 +32,7 @@ public class Requests {
         return response;
     }
 
+    //This method can only be used to perform a GET request
     public Response getRequestGivenApiName(final String apiName) {
 
         APIResources resourceAPI = APIResources.valueOf(apiName);

@@ -5,7 +5,7 @@ Feature: Test consult the via CEP API - Scenario Outline
     Given an address code <cep>
     When User calls "viaCEP1" with "GET" http request
     Then Status code is 200
-    And Validate the schema "viaCEP"
+    And Validate the schema "viaCEP2"
     Examples:
       | cep        |
       | "12248310" |
