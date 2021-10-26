@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>API Report HTML</title>
+<title>Bradesco Seguros - Report HTML</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
@@ -32,10 +32,10 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">API Automation Suite Report</span></a>
+<a href="#"><span class="badge badge-primary">Bradesco Seguros - Automation test</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">out 6, 2021 04:26:03 PM</span></a>
+<a href="#"><span class="badge badge-primary">out 26, 2021 03:00:31 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>out 6, 2021 04:26:03 PM</h3>
+<h3>out 26, 2021 03:00:31 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>out 6, 2021 04:26:08 PM</h3>
+<h3>out 26, 2021 03:00:35 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Test consult the via CEP API - Scenario Outline":2.784,"Test consult the via CEP API - project01":1.399
+"Test consult the via CEP API - project01":2.55,"Test consult the via CEP API - Scenario Outline":1.344
 };
 </script>
 <div class="row">
@@ -172,16 +172,16 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@project01</td>
-<td>1</td>
+<td>@viaCep</td>
+<td>6</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
 </tr>
 <tr>
-<td>@viaCep</td>
-<td>6</td>
+<td>@project01</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -250,7 +250,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@project01</a><a class="dropdown-item" href="#">@viaCep</a>
+<a class="dropdown-item" href="#">@viaCep</a><a class="dropdown-item" href="#">@project01</a>
 </ul>
 </li>
 </ul>
@@ -261,9 +261,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Test consult the via CEP API - Scenario Outline</p>
+            <p class="name">Test consult the via CEP API - project01</p>
             <p class="text-sm">
-              <span>16:26:03</span> / <span>00:00:02:784</span>
+              <span>15:00:31</span> / <span>00:00:02:550</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -271,10 +271,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Test consult the via CEP API - Scenario Outline</h5>
-<span class='badge badge-success'>10.06.2021 16:26:03</span>
-<span class='badge badge-danger'>10.06.2021 16:26:06</span>
-<span class='badge badge-default'>00:00:02:784</span>
+<h5 class="test-status text-pass">Test consult the via CEP API - project01</h5>
+<span class='badge badge-success'>10.26.2021 15:00:31</span>
+<span class='badge badge-danger'>10.26.2021 15:00:34</span>
+<span class='badge badge-default'>00:00:02:550</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -286,14 +286,122 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP - project01</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step.project01.userCallsWithGETHttpRequest(java.lang.String)">
+                <span>Given User calls "viaCEP" with GET http request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step.project01.status_code_is(java.lang.Integer)">
+                <span>Then Status code is 200</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step.project02.validateTheSchema(java.lang.String)">
+                <span>And Validate the schema "viaCEP"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 1</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step.project01.userCallsWithGETHttpRequest(java.lang.String)">
+                <span>Given User calls "viaCEP2" with GET http request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step.project01.status_code_is(java.lang.Integer)">
+                <span>Then Status code is 200</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step.project02.validateTheSchema(java.lang.String)">
+                <span>And Validate the schema "viaCEP1"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step.project01.userCallsWithGETHttpRequest(java.lang.String)">
+                <span>Given User calls "viaCEP2" with GET http request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step.project01.status_code_is(java.lang.Integer)">
+                <span>Then Status code is 200</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step.project02.validateTheSchema(java.lang.String)">
+                <span>And Validate the schema "viaCEP2"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test consult the via CEP API - Scenario Outline</p>
+            <p class="text-sm">
+              <span>15:00:34</span> / <span>00:00:01:344</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test consult the via CEP API - Scenario Outline</h5>
+<span class='badge badge-success'>10.26.2021 15:00:34</span>
+<span class='badge badge-danger'>10.26.2021 15:00:35</span>
+<span class='badge badge-default'>00:00:01:344</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
       </div>
     </div>
         <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
+                  <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -322,7 +430,7 @@ eventsCount: 5,
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
+                  <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -351,7 +459,7 @@ eventsCount: 5,
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="13"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
+                  <div class="node" id="26"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -382,114 +490,6 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="18"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Test consult the via CEP API - project01</p>
-            <p class="text-sm">
-              <span>16:26:06</span> / <span>00:00:01:399</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Test consult the via CEP API - project01</h5>
-<span class='badge badge-success'>10.06.2021 16:26:06</span>
-<span class='badge badge-danger'>10.06.2021 16:26:08</span>
-<span class='badge badge-default'>00:00:01:399</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP - project01</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="step.ViaCep.userCallsWithGETHttpRequest(java.lang.String)">
-                <span>Given User calls "viaCEP" with GET http request</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="step.ViaCep.status_code_is(java.lang.Integer)">
-                <span>Then Status code is 200</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="step.ViaCep.validateTheSchema(java.lang.String)">
-                <span>And Validate the schema "viaCEP"</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="23"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 1</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="step.ViaCep.userCallsWithGETHttpRequest(java.lang.String)">
-                <span>Given User calls "viaCEP2" with GET http request</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="step.ViaCep.status_code_is(java.lang.Integer)">
-                <span>Then Status code is 200</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="step.ViaCep.validateTheSchema(java.lang.String)">
-                <span>And Validate the schema "viaCEP"</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>Test Get viaCEP 2</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="step.ViaCep.userCallsWithGETHttpRequest(java.lang.String)">
-                <span>Given User calls "viaCEP2" with GET http request</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="step.ViaCep.status_code_is(java.lang.Integer)">
-                <span>Then Status code is 200</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="step.ViaCep.validateTheSchema(java.lang.String)">
-                <span>And Validate the schema "viaCEP"</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
       </ul>
     </div>
   </div>
@@ -507,42 +507,6 @@ eventsCount: 5,
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@project01</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@project01</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>16:26:06 PM</td>
-<td>
-<a href="#" class="linked" test-id='18' id='19'>Test Get viaCEP - project01</a>
-<div class="">
-<span class="badge badge-default">Test consult the via CEP API - project01.Test Get viaCEP - project01</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
@@ -567,39 +531,9 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>16:26:03 PM</td>
+<td>15:00:31 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>Test Get viaCEP 2</a>
-<div class="">
-<span class="badge badge-default">Test consult the via CEP API - Scenario Outline.Test Get viaCEP 2</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>16:26:05 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='8'>Test Get viaCEP 2</a>
-<div class="">
-<span class="badge badge-default">Test consult the via CEP API - Scenario Outline.Test Get viaCEP 2</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>16:26:06 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='13'>Test Get viaCEP 2</a>
-<div class="">
-<span class="badge badge-default">Test consult the via CEP API - Scenario Outline.Test Get viaCEP 2</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>16:26:06 PM</td>
-<td>
-<a href="#" class="linked" test-id='18' id='19'>Test Get viaCEP - project01</a>
+<a href="#" class="linked" test-id='1' id='2'>Test Get viaCEP - project01</a>
 <div class="">
 <span class="badge badge-default">Test consult the via CEP API - project01.Test Get viaCEP - project01</span>
 </div>
@@ -607,9 +541,9 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>16:26:07 PM</td>
+<td>15:00:33 PM</td>
 <td>
-<a href="#" class="linked" test-id='18' id='23'>Test Get viaCEP 1</a>
+<a href="#" class="linked" test-id='1' id='6'>Test Get viaCEP 1</a>
 <div class="">
 <span class="badge badge-default">Test consult the via CEP API - project01.Test Get viaCEP 1</span>
 </div>
@@ -617,11 +551,77 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>16:26:07 PM</td>
+<td>15:00:33 PM</td>
 <td>
-<a href="#" class="linked" test-id='18' id='27'>Test Get viaCEP 2</a>
+<a href="#" class="linked" test-id='1' id='10'>Test Get viaCEP 2</a>
 <div class="">
 <span class="badge badge-default">Test consult the via CEP API - project01.Test Get viaCEP 2</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:00:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='16'>Test Get viaCEP 2</a>
+<div class="">
+<span class="badge badge-default">Test consult the via CEP API - Scenario Outline.Test Get viaCEP 2</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:00:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='21'>Test Get viaCEP 2</a>
+<div class="">
+<span class="badge badge-default">Test consult the via CEP API - Scenario Outline.Test Get viaCEP 2</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:00:35 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='26'>Test Get viaCEP 2</a>
+<div class="">
+<span class="badge badge-default">Test consult the via CEP API - Scenario Outline.Test Get viaCEP 2</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@project01</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@project01</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:00:31 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Test Get viaCEP - project01</a>
+<div class="">
+<span class="badge badge-default">Test consult the via CEP API - project01.Test Get viaCEP - project01</span>
 </div>
 </td>
 </tr>
