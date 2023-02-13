@@ -1,0 +1,73 @@
+#name : RestasssuredCucumber
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+variables:
+  MAVEN_CACHE_FOLDER: $(Pipeline.Workspace)/.m2/repository
+  MAVEN_OPTS: '-Dmaven.repo.local=$(MAVEN_CACHE_FOLDER)'
+  CACHE_RESTORED: 'false'
+  TIMESTAMP: $[format('{0:ddMMyyyyHHmmss}', pipeline.startTime)]
+
+
+#steps:
+stages:
+- stage: Execute_tests_and_Publish
+  displayName: Execute tests and Publish
+  jobs:
+  - job: 'Execute_tests_and_Publish'
+    displayName: Execute tests and Publish
+    steps:
+    - task: Cache@2
+      inputs:
+        key: '"funcs" | maven |"$(Agent.OS)" | **/pom.xml'
+        cacheHitVar: CACHE_RESTORED
+        restoreKeys: |
+        path: $(MAVEN_CACHE_FOLDER)
+      displayName: Cache Maven local repo
+
+    - task: Maven@3
+      displayName: Execute automated tests
+      inputs:
+        mavenPomFile: 'pom.xml'
+        mavenOptions: '-Xmx3072m $(MAVEN_OPTS)'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.11'
+        jdkArchitectureOption: 'x64'
+        publishJUnitResults: false
+        #testRunTitle: 'Automated-tests-$(Build.BuildNumber)'
+        #testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        goals: 'test'
+        
+    - task: PublishTestResults@2
+      displayName: 'Publish test results'
+      condition: succeededOrFailed()
+      inputs:
+        testResultsFormat: 'JUnit'
+        failTaskOnFailedTests: true
+        mergeTestResults: true
+        testRunTitle: 'Automated tests - $(TIMESTAMP)'
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+
+    - task: PublishPipelineArtifact@1
+      displayName: 'Publish PDF test results'
+      condition: succeededOrFailed()
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/test-output/Pdf'
+        artifactName: 'Relatório'
+        
+    - task: PublishPipelineArtifact@1
+      displayName: 'Publish html test results'
+      condition: succeededOrFailed()
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/test-output/Spark'
+        artifactName: HTML
+
+    - task: PublishPipelineArtifact@1
+      displayName: 'Publish Json test results'
+      condition: succeededOrFailed()
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/test-output/Json'
+        artifactName: Json        
